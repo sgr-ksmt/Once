@@ -1,4 +1,9 @@
 # Once
+[![GitHub release](https://img.shields.io/github/release/sgr-ksmt/Once.svg)](https://github.com/sgr-ksmt/Once/releases)
+![Language](https://img.shields.io/badge/language-Swift%203-orange.svg)  
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+
 Execute closure once!!! Once is a micro framework.
 
 ```swift
@@ -10,7 +15,7 @@ class ViewController: UIViewController {
         print("execute once")
         self.dataSource.reload()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         onceReloader?()   
@@ -32,7 +37,7 @@ class ViewController: UIViewController {
             callFirst = falee
         }
     }
-    
+
     func reloadOnce() {
         print("execute once")
         self.dataSource.reload()
@@ -49,7 +54,7 @@ class ViewController: UIViewController {
 - micro library!
 
 
-## HowTo
+## How to use
 
 - 1. Import framework
 
@@ -65,10 +70,10 @@ class ViewController: UIViewController {
         print("execute once")
         self.dataSource.reload()
     }
-    
+
     // or function    
     lazy var onceReloader2: OnceClosure = self.reloadOnce()
-    
+
     func reloadOnce() -> OnceClosure {
         return execute_once {
             print("execute once")
@@ -102,7 +107,7 @@ class ViewController: UIViewController {
         print("execute once")
         self.dataSource.reload()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         onceReloader = nil
@@ -110,3 +115,31 @@ class ViewController: UIViewController {
     }
 }
 ```
+
+## Requirements
+- iOS 8.0+
+- Xcode 8+
+- Swift 3
+
+## Installation
+You can install with carthage or SPM.
+
+### Carthage
+
+- Add the following to your *Cartfile*:
+
+```bash
+# for Swift 3
+github 'sgr-ksmt/once'
+```
+
+- Then run command.
+
+## Communication
+- If you found a bug, please open an issue. :bow:
+- Also, if you have a feature request, please open an issue. :thumbsup:
+- If you want to contribute, submit a pull request.:muscle:
+
+## License
+
+**Once** is under MIT license. See the [LICENSE](LICENSE) file for more info.
