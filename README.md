@@ -1,6 +1,6 @@
 # Once
 [![GitHub release](https://img.shields.io/github/release/sgr-ksmt/Once.svg)](https://github.com/sgr-ksmt/Once/releases)
-![Language](https://img.shields.io/badge/language-Swift%203-orange.svg)  
+![Language](https://img.shields.io/badge/language-Swift%203-orange.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
@@ -129,7 +129,6 @@ You can install with carthage or SPM.
 - Add the following to your *Cartfile*:
 
 ```bash
-# for Swift 3
 github 'sgr-ksmt/once'
 ```
 
