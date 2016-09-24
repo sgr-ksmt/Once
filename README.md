@@ -78,7 +78,7 @@ class ViewController: UIViewController {
 }
 ```
 
-- 3. Execute once closure!! (need `?`)
+- 3. Execute once closure!! (need `?`)  
 
 ```swift
 class ViewController: UIViewController {
@@ -86,6 +86,27 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         onceReloader?()
+    }
+}
+```
+
+### Caution
+Once-closure will not work anymore if it is assigned `nil` before executing.
+
+```swift
+import Once
+
+class ViewController: UIViewController {
+    private var dataSource = DataSource()
+    lazy var onceReloader: OnceClosure = execute_once {
+        print("execute once")
+        self.dataSource.reload()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        onceReloader = nil
+        onceReloader?() // doesn't work.
     }
 }
 ```
