@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 - Don't need to have any flags that closure called or not.
 - This function doesn't capture any objects by using `no-escaped` closure.
     - You don't have to use `[weak self], [unowned self]`.
-- micro library!
+- Micro library!
 
 
 ## How to use
