@@ -6,7 +6,7 @@ import Once
 
 class ViewController: UIViewController {
     private var dataSource = DataSource()
-    lazy var onceReloader: OnceClosure = execute_once { [unowned self] in
+    lazy var onceReloader: OnceClosure = execute_once {
         print("execute once")
         self.dataSource.reload()
     }
