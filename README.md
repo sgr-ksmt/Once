@@ -57,7 +57,6 @@ class ViewController: UIViewController {
 
 - 2. Define `lazy var` instance.  
 **Note**: Don't forget to write parameter: `OnceClosure`  
-**Note**: Use `[unowned self]` to avoid 
 
 ```swift
 class ViewController: UIViewController {
