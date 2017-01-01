@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var button: UIButton!
     
-    lazy var buttonFirstTap: OnceClosure = execute_once {
+    lazy var buttonFirstTap: OnceClosure = Once.execute {
         print("[First] tapped!!")
     }
     override func viewDidLoad() {
