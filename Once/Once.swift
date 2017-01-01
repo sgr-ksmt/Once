@@ -9,7 +9,13 @@
 import Foundation
 
 public typealias OnceClosure = (() -> Void)?
-public func execute_once(_ execute: () -> Void) -> OnceClosure {
-    execute()
-    return { return nil }()
+
+public final class Once {
+    private init() {}
+
+    public static func execute(_ execute: () -> Void) -> OnceClosure {
+        execute()
+        return { return nil }()
+    }
 }
+
